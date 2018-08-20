@@ -8,15 +8,15 @@ jobs:
 
     # Specify the Xcode version to use
     macos:
-      xcode: "9.2.0"
+      xcode: "10.0.0"
 
     steps:
       - checkout
-      
+
       - run:
           name: Before Install
-          command: echo -e "machine bitbucket.org\n  login fassko\n  password $CI_USER_PASSWORD" >> ~/.netrc 
-          
+          command: echo -e "machine bitbucket.org\n  login fassko\n  password $CI_USER_PASSWORD" >> ~/.netrc
+
       - run:
           name: Cocoapods
           command: |
@@ -24,12 +24,13 @@ jobs:
             sudo gem install cocoapods
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
             pod install
-          
+
       - run:
           name: Fastlane install
           command: |
             sudo gem install fastlane --no-doc
             sudo gem cleanup
+            fastlane snapshot reset_simulators --force
 
       - run:
           name: Build and run tests

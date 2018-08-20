@@ -150,7 +150,6 @@
 				6300DC822039ED7D007C268C /* Frameworks */,
 				6300DC832039ED7D007C268C /* Resources */,
 				EF2C85ED5CFB5883A39AD9FC /* [CP] Embed Pods Frameworks */,
-				7A838B3ADCF4F886844CB842 /* [CP] Copy Pods Resources */,
 				63EC843F204495740073749B /* Swiftlint */,
 				63F1F7F020460A7900305DF7 /* Fabric */,
 			);
@@ -269,21 +268,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 34be06edc6f733a743335744b07a23f6a3e5b344 a9207ff06b3417aa4bf8c6408432761ca87c5b52dca8f2365b133eea61d407cc";
-		};
-		7A838B3ADCF4F886844CB842 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		C3D744013C4C799D8FD15F77 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

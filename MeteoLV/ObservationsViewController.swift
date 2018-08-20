@@ -42,6 +42,7 @@ class ObservationsViewController: UIViewController {
     self.mapView.removeAnnotations(self.mapView.annotations)
     loadObservations()
     loadLatvianRoadsObservations()
+    UINotificationFeedbackGenerator().notificationOccurred(.success)
   }
   
   /**
@@ -66,7 +67,7 @@ class ObservationsViewController: UIViewController {
           self.mapView.addAnnotations(annoations)
         }
       case let .failure(error):
-        print(error)
+        assertionFailure(error.localizedDescription)
       }
     }
   }
@@ -93,7 +94,7 @@ class ObservationsViewController: UIViewController {
           self.mapView.addAnnotations(annoations)
         }
       case let .failure(error):
-        print(error)
+        assertionFailure(error.localizedDescription)
       }
     }
   }
